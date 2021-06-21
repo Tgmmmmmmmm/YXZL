@@ -16,15 +16,19 @@ import { HeroTopComponent } from './components/hero-top/hero-top.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroAddComponent } from './components/hero-add/hero-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HeroListComponent,
     HeroTopComponent,
     HeroDetailComponent,
-    HeroAddComponent
+    HeroAddComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
