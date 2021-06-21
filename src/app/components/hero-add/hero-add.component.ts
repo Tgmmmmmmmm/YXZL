@@ -1,4 +1,8 @@
+
+import { HeroService } from '../../hero.service';
+import { Hero } from '../../hero';
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-hero-add',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroService: HeroService, private location: Location) {}
 
-  ngOnInit(): void {
+  ngOnInit() {}
+
+  add(no: string, name: string, description: string, isTop: boolean): void {
+    if (!no || !name) { return; }
+    this.heroService.addHero({no, name, description, isTop} as Hero)
+      .subscribe();
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }

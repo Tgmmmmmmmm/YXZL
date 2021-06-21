@@ -36,7 +36,7 @@ import { HeroAddComponent } from './components/hero-add/hero-add.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
