@@ -1,1 +1,30 @@
 <p>hero-list works!</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>姓 名</th>
+        <th>顶级英雄</th>
+        <th>删 除</th>
+        <th>查 看</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heroes" >
+        <th scope="row">{{hero.no}}</th>
+        <td>{{hero.name}}</td>
+        <td>{{hero.isTop?'是':'否'}}</td>
+        <td>
+          <button (click)="delete(hero.id)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+        <td>
+            <a routerLink="/hero-detail/{{hero.id}}">
+              <i class="fa fa-eye"></i>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

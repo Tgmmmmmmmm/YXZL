@@ -31,6 +31,7 @@ export class HeroService {
   }
 // 删除一个英雄
   deleteHero(id: string): Observable<any> {
+    console.log("sc")
     return this.httpClient.delete(`${this.heroesUrl}/${id}`);
   }
 // 更新一个英雄

@@ -1,1 +1,31 @@
 <p>hero-add works!</p>
+
+
+            <i class="fa fa-user-plus"></i> 请填写英雄信息
+          <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="goBack()">
+            <span aria-hidden="true">×</span>
+          </button>
+       
+              <input mdbActive type="text" id="formNo" class="form-control text-center" #no required>
+              <label class="text-default" for="formNo">编号</label>
+          
+              <input mdbActive type="text" id="formName" class="form-control text-center" #name required>
+              <label class="text-default" for="formName">姓名</label>
+         
+  
+           
+            
+              <textarea mdbActive type="text" id="formdesc" class="md-textarea mb-0" #desc></textarea>
+              <label class="text-default" for="formdesc">简介</label>
+          
+  
+              <label for="checkbox1">顶级英雄？</label>
+              <input type="checkbox" id="checkbox1" #isTop>
+         
+            <hr>
+        
+              <button type="submit" class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="add(no.value,name.value,desc.value,isTop.checked);no.value='';name.value='';desc.value='';isTop.checked=false">
+                添 加
+                <i class="fa fa-send ml-1"></i>
+              </button>
+           

@@ -1,1 +1,14 @@
-<p>hero-top works!</p>
+
+ 
+    <div *ngFor="let topHero of topHeroes">
+      <div>
+        顶级英雄-{{topHero.no}}
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{topHero.name}}</h4>
+        <p class="card-text text-truncate">{{topHero.description}}</p>
+        <div class="text-center">
+          <a class="btn btn-deep-orange waves-light" routerLink="/hero-detail/{{topHero.id}}" mdbRippleRadius>查看详情</a>
+        </div>
+      </div>
+    </div>

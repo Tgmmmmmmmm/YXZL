@@ -9,7 +9,7 @@ import { HeroService } from '../../hero.service';
   styleUrls: ['./hero-list.component.scss']
 })
 export class HeroListComponent implements OnInit {
-  heroes: Hero[];
+  heroes: Hero[] = [];
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -24,5 +24,6 @@ export class HeroListComponent implements OnInit {
   delete(id: string): void {
     this.heroService.deleteHero(id)
       .subscribe(() => this.heroes = this.heroes.filter(h => h.id !== id));
+    console.log("s")
   }
 }

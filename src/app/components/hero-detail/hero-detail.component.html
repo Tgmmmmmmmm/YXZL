@@ -1,1 +1,34 @@
 <p>hero-detail works!</p>
+
+
+          <h3>英雄详情</h3>
+        
+  
+      
+          <input mdbActive type="text" id="formNo" class="form-control text-center" [(ngModel)]="hero.no" placeholder="编号">
+          <label class="text-default" for="formNo">编号</label>
+      
+  
+       
+          <input mdbActive type="text" id="formName" class="form-control text-center" [(ngModel)]="hero.name" placeholder="姓名">
+          <label class="text-default" for="formName">姓名</label>
+      
+  
+      
+          <textarea mdbActive type="text" id="formdesc" class="md-textarea mb-0"  [(ngModel)]="hero.description"></textarea>
+          <label class="text-default" for="formdesc">简介</label>
+        
+    
+          <label class="text-default" for="checkbox1">顶级英雄？</label>
+          <input type="checkbox" id="checkbox1"  [(ngModel)]="hero.isTop">
+      
+        <hr>
+        <div class="text-center mt-1-half">
+          <button class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="save()">
+            保存
+          </button>
+          <button class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="goBack()">
+              返回
+          </button>
+        </div>
+  
