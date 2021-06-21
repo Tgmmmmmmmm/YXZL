@@ -15,6 +15,7 @@ import { HeroListComponent } from './components/hero-list/hero-list.component';
 import { HeroTopComponent } from './components/hero-top/hero-top.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroAddComponent } from './components/hero-add/hero-add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HeroAddComponent } from './components/hero-add/hero-add.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

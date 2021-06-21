@@ -128,6 +128,15 @@
   dependencies:
     tslib "^2.1.0"
 
+"@angular/cdk@~12.0.4-sha-90f33167b":
+  version "12.0.5"
+  resolved "https://registry.nlark.com/@angular/cdk/download/@angular/cdk-12.0.5.tgz#104c11efd2c1c48d914637336ad439ba4bbb52e7"
+  integrity sha1-EEwR79LBxI2RRjczatQ5uku7Uuc=
+  dependencies:
+    tslib "^2.1.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~12.0.5":
   version "12.0.5"
   resolved "https://registry.nlark.com/@angular/cli/download/@angular/cli-12.0.5.tgz#0b1c77fd1516743f2609ebe8036d3da7379607b2"
@@ -199,6 +208,13 @@
   version "12.0.5"
   resolved "https://registry.nlark.com/@angular/forms/download/@angular/forms-12.0.5.tgz#17e888667d644b03f4d67928f47bbf227fc6b4ee"
   integrity sha1-F+iIZn1kSwP01nko9Hu/In/GtO4=
+  dependencies:
+    tslib "^2.1.0"
+
+"@angular/material@~12.0.4-sha-90f33167b":
+  version "12.0.5"
+  resolved "https://registry.nlark.com/@angular/material/download/@angular/material-12.0.5.tgz#8c1b6f5c54c5f8fb21f7bbc324c46a07ab82d60e"
+  integrity sha1-jBtvXFTF+Psh97vDJMRqB6uC1g4=
   dependencies:
     tslib "^2.1.0"
 
@@ -5409,6 +5425,11 @@ parse5-sax-parser@^6.0.1:
   integrity sha1-mLTTZrWyZqfNkLS1iQZmeviC2ro=
   dependencies:
     parse5 "^6.0.1"
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.nlark.com/parse5/download/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha1-9o5OW6GFKsLK3AD0VV//bCq7YXg=
 
 parse5@^6.0.1:
   version "6.0.1"
