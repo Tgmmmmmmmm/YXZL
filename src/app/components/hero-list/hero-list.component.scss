@@ -1,0 +1,84 @@
+table {
+width: 100%;
+}
+tr.example-detail-row {
+height: 0;
+}
+tr.example-element-row:not(.example-expanded-row):hover {
+background: whitesmoke;
+}
+tr.example-element-row:not(.example-expanded-row):active {
+background: #efefef;
+}
+.example-element-row td {
+border-bottom-width: 0;
+}
+.example-element-detail {
+overflow: hidden;
+
+}
+
+.mat-column-no ,.mat-column-name,.mat-column-top{
+    width:33%;// 每个按钮的width=40px，所以列宽比按钮总和略宽即可
+    text-align: center;
+}
+.wrapper {
+    height: 300px;
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .product-info {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+  }
+  
+  .product-text {
+    height: 200px;
+    width: 100%;
+  }
+  
+  .product-text h1{
+      display: inline-block;
+    margin: 0 10px 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+  }
+
+  .product-text h1,
+  .product-price-btn p {
+    font-family: 'Bentham', serif;
+  }
+  
+  .product-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+  
+  .product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+ 
