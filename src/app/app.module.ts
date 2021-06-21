@@ -5,16 +5,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavigatorComponent } from './components/navigator/navigator.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HeroListComponent } from './components/hero-list/hero-list.component';
+import { HeroTopComponent } from './components/hero-top/hero-top.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { HeroAddComponent } from './components/hero-add/hero-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigatorComponent,
+    HeroListComponent,
+    HeroTopComponent,
+    HeroDetailComponent,
+    HeroAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
