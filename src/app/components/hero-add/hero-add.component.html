@@ -1,30 +1,50 @@
 
+<div class="wrapper">
+  <div class="product-info">
+    <div class="product-text">
+      <h1>添加英雄</h1>
+      
+      <button  mat-icon-button (click)="openSnackBar(name.value+' 英雄已添加完毕!')" (click)="add(no.value,name.value,desc.value,isTopState);no.value='';name.value='';desc.value='';isTopState=false">
+        <mat-icon>add</mat-icon>
+      </button>
+     
+      
+      <mat-form-field  appearance="fill">
+        <mat-error>请输入英雄名！</mat-error>
+        <mat-label>英雄名</mat-label>
+        <input matInput  #name placeholder="新英雄名" required>
+      </mat-form-field>
 
-            <i class="fa fa-user-plus"></i> 请填写英雄信息
-          <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="goBack()">
-            <span aria-hidden="true">×</span>
-          </button>
-       
-              <input mdbActive type="text" id="formNo" class="form-control text-center" #no required>
-              <label class="text-default" for="formNo">编号</label>
-          
-              <input mdbActive type="text" id="formName" class="form-control text-center" #name required>
-              <label class="text-default" for="formName">姓名</label>
-         
+
+
+      <button  mat-icon-button #isTop (click)="isTopState=!isTopState">
+        <mat-icon *ngIf="isTopState">person</mat-icon>
+        <mat-icon *ngIf="!isTopState">person_outline</mat-icon>
+      </button>
+      <br>
+
+      <h2>
+        <mat-form-field  appearance="fill">
+          <mat-error>请输入英雄编号！</mat-error>
+          <mat-label>英雄编号</mat-label>
+          <input matInput #no placeholder="新英雄编号" required>
+        </mat-form-field>
+      </h2>
+
+
+
+
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>英雄描述</mat-label>
+          <textarea matInput #desc placeholder="新英雄描述"></textarea>
+        </mat-form-field>
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+
   
-           
-            
-              <textarea mdbActive type="text" id="formdesc" class="md-textarea mb-0" #desc></textarea>
-              <label class="text-default" for="formdesc">简介</label>
-          
-  
-              <label for="checkbox1">顶级英雄？</label>
-              <input type="checkbox" id="checkbox1" #isTop>
-         
-            <hr>
-        
-              <button type="submit" class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="add(no.value,name.value,desc.value,isTop.checked);no.value='';name.value='';desc.value='';isTop.checked=false">
-                添 加
-                <i class="fa fa-send ml-1"></i>
-              </button>
-           

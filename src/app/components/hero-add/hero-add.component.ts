@@ -3,6 +3,7 @@ import { HeroService } from '../../hero.service';
 import { Hero } from '../../hero';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-hero-add',
@@ -10,9 +11,15 @@ import { Location } from '@angular/common';
   styleUrls: ['./hero-add.component.scss']
 })
 export class HeroAddComponent implements OnInit {
-
-  constructor(private heroService: HeroService, private location: Location) {}
-
+  isTopState:boolean=false;
+  constructor(private heroService: HeroService, private location: Location,private _snackBar:MatSnackBar) {}
+  
+  openSnackBar(message: string) {
+    
+    this._snackBar.open(message, 'close', {
+      duration: 3000
+    });
+  }
   ngOnInit() {}
 
   add(no: string, name: string, description: string, isTop: boolean): void {

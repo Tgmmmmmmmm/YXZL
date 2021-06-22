@@ -1,33 +1,56 @@
+<div class="wrapper">
+  <div class="product-info">
+    <div class="product-text">
+      <h1>英雄详情</h1>
+      <button mat-icon-button (click)="edit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button *ngIf="!editState" mat-icon-button (click)="goBack()">
+        <mat-icon>undo</mat-icon>
+      </button>
+      <button *ngIf="editState" mat-icon-button (click)="openSnackBar(hero.name+' 英雄信息已保存成功!')" (click)="save()">
+        <mat-icon>save</mat-icon>
+      </button>
+      <h1 *ngIf="!editState">{{hero.name}}</h1>
+      <mat-form-field *ngIf="editState" appearance="fill">
+        <mat-error>请输入英雄名！</mat-error>
+        <mat-label>英雄名</mat-label>
+        <input matInput [(ngModel)]="hero.name" placeholder="新英雄名" required>
+      </mat-form-field>
 
 
-          <h3>英雄详情</h3>
-        
-  
-      
-          <input mdbActive type="text" id="formNo" class="form-control text-center" [(ngModel)]="hero.no" placeholder="编号">
-          <label class="text-default" for="formNo">编号</label>
-      
-  
-       
-          <input mdbActive type="text" id="formName" class="form-control text-center" [(ngModel)]="hero.name" placeholder="姓名">
-          <label class="text-default" for="formName">姓名</label>
-      
-  
-      
-          <textarea mdbActive type="text" id="formdesc" class="md-textarea mb-0"  [(ngModel)]="hero.description"></textarea>
-          <label class="text-default" for="formdesc">简介</label>
-        
-    
-          <label class="text-default" for="checkbox1">顶级英雄？</label>
-          <input type="checkbox" id="checkbox1"  [(ngModel)]="hero.isTop">
-      
-        <hr>
-        <div class="text-center mt-1-half">
-          <button class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="save()">
-            保存
-          </button>
-          <button class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="goBack()">
-              返回
-          </button>
-        </div>
-  
+
+      <button *ngIf="editState" mat-icon-button (click)="hero.isTop=!hero.isTop">
+        <mat-icon *ngIf="hero.isTop">person</mat-icon>
+        <mat-icon *ngIf="!hero.isTop">person_outline</mat-icon>
+      </button>
+      <br>
+
+      <h2 *ngIf="!editState">{{hero.id}}</h2>
+      <h2>
+        <mat-form-field *ngIf="editState" appearance="fill">
+          <mat-error>请输入英雄编号！</mat-error>
+          <mat-label>英雄编号</mat-label>
+          <input matInput [(ngModel)]="hero.no" placeholder="新英雄编号" required>
+        </mat-form-field>
+      </h2>
+
+
+
+
+      <p *ngIf="!editState"><br>{{hero.description}}</p>
+      <p *ngIf="editState">
+        <mat-form-field appearance="fill">
+          <mat-label>英雄描述</mat-label>
+          <textarea matInput [(ngModel)]="hero.description" placeholder="新英雄描述"></textarea>
+        </mat-form-field>
+      </p>
+
+
+
+
+
+    </div>
+
+  </div>
+</div>
