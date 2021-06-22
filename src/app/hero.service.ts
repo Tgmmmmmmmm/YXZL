@@ -9,7 +9,7 @@ import { Hero } from './hero';
 })
 export class HeroService {
 // 请留意修改为你自己的URL
-  private heroesUrl = 'http://localhost:2403/heroes';
+  private heroesUrl = 'http://47.102.123.190:2403/heroes';
 // 注入了HttpClient服务
   constructor(private httpClient: HttpClient) { }
 // 获取所有英雄
