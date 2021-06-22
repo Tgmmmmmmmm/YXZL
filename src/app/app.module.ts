@@ -26,6 +26,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MySummaryComponent } from './components/my-summary/my-summary.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HeroTopComponent,
     HeroDetailComponent,
     HeroAddComponent,
+    MySummaryComponent,
     
   ],
   imports: [
