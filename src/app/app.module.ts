@@ -27,6 +27,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MySummaryComponent } from './components/my-summary/my-summary.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,9 +59,10 @@ import { MySummaryComponent } from './components/my-summary/my-summary.component
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule,MatSnackBarModule
+    MatCheckboxModule,MatSnackBarModule,
+    
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
