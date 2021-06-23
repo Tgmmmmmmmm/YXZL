@@ -1,795 +1,365 @@
 
-<body class='typora-export os-windows'>
-    <div class='typora-export-content'>
-        <div id='write' class=''>
-            <h1 id='web应用基础'><span>Web应用基础</span></h1>
-            <p><span>做的什么、开发过程、遇到的问题、如何解决、哪些未解决、总结；</span></p>
-            <h2 id='做的什么-'><span>做的什么 ？</span></h2>
-            <p><span>在本次的开发中Web应用基础开发中，秉承着</span><code>学习</code><span>+</span><code>实践</code><span>的理念，我结合老师的</span><strong><span>英雄之旅1.0教程</span></strong><span>、</span><strong><span>英雄之旅2.0教程</span></strong><span>、</span><strong><span>Angular官网教程：英雄之旅</span></strong><span>三大教程等资料，进行前端框架</span><code>Angular</code><span>模拟一个生产环境进行我的</span><strong><span>TOH英雄之旅</span></strong><span>开发</span>
-            </p>
-            <h3 id='期间接触到许多新的技术和知识如下'><span>期间接触到许多新的技术和知识如下：</span></h3>
-            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-                lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" ><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1. Typescript基础语法</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">2. JS运行环境node安装</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">3. vsCode运行环境插件配置</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">4. git版本控制使用</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">5. github远端仓库使用</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">6. 包管理器选择及配置</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">7. Angular开发工具angular/cli安装配置及使用</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">8. 利用Node和MongoDB支持的合成框架Deployd后台服务器</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">9. 利用angular/cli部署</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 207px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 207px;"></div>
-    </div>
-    </div>
-    </pre>
-    <h3 id='最终项目实现'><span>最终项目实现：</span></h3>
-    <ul>
-        <li><span>导航栏固定使用路由更换显示组件</span></li>
-        <li><span>所有英雄列表，单击某英雄将展开操作页面</span></li>
-        <li><span>顶级英雄卡片，查看详情进入英雄详情</span></li>
-        <li><span>英雄详情页面可以编辑英雄信息并保存同步至服务器</span></li>
-        <li><span>添加英雄到数据库</span></li>
-        <li><span>使用共享服务管理英雄</span></li>
-        <li><span>使用路由在不同视图及组件导航</span></li>
-        <li><span>组件数据传递、组件方法绑定</span></li>
-        <li><span>报告展示</span></li>
-    </ul>
-    <h3 id='页面展示'><span>页面展示：</span></h3>
-    <h4 id='所有英雄列表页面'><span>所有英雄列表页面</span></h4>
-    <p><img src="./assets/pic/image-20210622223902203.png" referrerpolicy="no-referrer" alt="显示不了"></p>
-    <p>&nbsp;</p>
-    <p><span>该页面组成由</span><code>导航栏</code><span>和</span><code>列表</code><span>组成，导航栏为app应用构建，下面的所有内容都是路由展示的视图。</span></p>
-    <p><span>导航栏可以分别切换四个视图，之后将对每个页面进行简单介绍。</span></p>
-    <p><strong><span>英雄列表</span></strong><span> 有编号，姓名，是否为顶级英雄三个属性。</span></p>
-    <p><span>每一列对应一位英雄，单击可展开其中的操作页面</span></p>
-    <p><img src="./assets/pic/image-20210622224357341.png" referrerpolicy="no-referrer" alt="image-20210622224357341"></p>
-    <p><strong><span>操作页面</span></strong><span> 展示了该英雄的名字，id，和描述信息</span></p>
-    <p><strong><span>可以进行·</span><code>删除</code><span>与</span><code>进入英雄详情页面编辑</code></strong></p>
-    <p><span>此功能与顶级英雄详情页面雷同，后续进行解释。</span></p>
-    <p><img src="./assets/pic/image-20210622224039337.png" referrerpolicy="no-referrer" alt="image-20210622224039337"></p>
-    <p><span>注：</span><img src="./assets/pic/image-20210623074503518.png" referrerpolicy="no-referrer"
-            alt="image-20210623074503518"><span>进行占位，后续所有路由导航的组件皆在这里展示。</span></p>
-    <h4 id='顶级英雄列表页面'><span>顶级英雄列表页面</span></h4>
-    <p><img src="./assets/pic/image-20210622224927511.png" referrerpolicy="no-referrer" alt="image-20210622224927511"></p>
-    <p><span>该页面导航栏不再赘述，其下排布有</span><strong><span>所有顶级英雄的卡片介绍</span></strong></p>
-    <p><span>点击</span><code>查看详情</code><span>可以单独查看某位英雄的详情页面，</span></p>
-    <p><strong><span>详情页面</span></strong><span> 可以编辑英雄的所有信息</span></p>
-    <p><img src="./assets/pic/image-20210622225313051.png" referrerpolicy="no-referrer" alt="image-20210622225313051"></p>
-    <p><span>点击</span><code>编辑</code><span>符号进入编辑模式，</span><code>返回</code><span>符号返回进入的页面，即英雄列表或顶级英雄卡片。</span></p>
-    <p><strong><span>编辑页面</span></strong><span>
-            对每个展示的信息利用</span><strong><span>输入框绑定数据</span></strong><span>进行修改一下数据。</span></p>
-    <p><strong><span>注意特殊符号：</span></strong></p>
-    <p><code>保存</code><span>：</span></p>
-    <p><img src="./assets/pic/image-20210622225544916.png" referrerpolicy="no-referrer" alt="image-20210622225544916"></p>
-    <p><span>更改信息后</span><strong><span>必须点击保存</span></strong><span>才能更改数据库信息。</span></p>
-    <p><strong><em><span>保存后将返回页面并提示</span></em></strong></p>
-    <p><img src="./assets/pic/image-20210622230027208.png" referrerpolicy="no-referrer" alt="image-20210622230027208"></p>
-    <p><code>是否顶级符号</code></p>
-    <p><code>顶级</code><span>:</span></p>
-    <p><img src="./assets/pic/image-20210622225735815.png" referrerpolicy="no-referrer" alt="image-20210622225735815"></p>
-    <p><code>非顶级</code><span>:</span></p>
-    <p><img src="./assets/pic/image-20210622225823270.png" referrerpolicy="no-referrer" alt="image-20210622225823270"></p>
-    <p><strong><span>单击顶级符号</span></strong><span>即可更改状态。</span></p>
-    <p>&nbsp;</p>
-    <p><mark><span>详情页面多处使用了*ngif以显示和隐藏组件</span></mark></p>
-    <p><img src="./assets/pic/image-20210623074542182.png" referrerpolicy="no-referrer" alt="image-20210623074542182"></p>
-    <p><span>各页面详细代码后续附上。</span></p>
-    <h4 id='添加英雄'><span>添加英雄</span></h4>
-    <p><img src="./assets/pic/image-20210622230420863.png" referrerpolicy="no-referrer" alt="image-20210622230420863"></p>
-    <p><span>添加英雄页面与 </span><strong><span>详情页面下的编辑模式相似</span></strong></p>
-    <p><span>不过没有内置属性，将新建数据到数据库</span></p>
-    <p>&nbsp;</p>
-    <h4 id='我的报告页面'><span>我的报告页面</span></h4>
-    <p><span>由于本次构建的是angular动态网页，免费部署到github只能为静态网页，所以一开始本页面将放置演示视频。</span></p>
-    <p><span>通过本课程也学习到了markdown语法书写文档，所以本报告采用typora书写转换为html格式上传。</span></p>
-    <h2 id='开发过程'><span>开发过程</span></h2>
-    <h3 id='typescriptnodegit前期准备'><span>TypeScript+node+git前期准备</span></h3>
-    <p><span>此三项知识技能及环境准备在以前就已经完成，所以本次开发直接使用，不再赘述过程。</span></p>
-    <h3 id='vscode配置'><span>vsCode配置</span></h3>
-    <p><span>此次编辑使用VS Code进行，其中内置了git使用方式，不需要使用git bash进行。提前将git与远端仓库github进行配置好，使用ssh连接方式。</span></p>
-    <h3 id='yarn安装'><span>yarn安装</span></h3>
-    <p><span>使用yarn包进行管理，同时更换其包仓库为淘宝</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 093144.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 093144"></p>
-    <p><mark><span>发现问题</span></mark><span>：</span></p>
-    <p><span>提示禁止运行脚本，根据百度搜索用一行代码更改某值属性解决问题。</span></p>
-    <p><img src="./assets/pic/image-20210622232424294.png" referrerpolicy="no-referrer" alt="image-20210622232424294"></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.25px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> yarn global add yrm &nbsp; # 注意使用管理员权限进行全局安装. 注意: 如果安装成功后yrm不能运行, 则是路径问题, 请使用 yarn global bin 查看位置并添加到系统路径中(建议重启系统生效)</span></pre>
-    </div>
-    <div class="" style="position: relative;">
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  yrm ls &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  # 列出可用的源</span></pre>
-    </div>
-    <pre class=" CodeMirror-line "
-        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  yrm test taobao &nbsp; &nbsp; &nbsp; # 测速</span></pre>
-    <pre class=" CodeMirror-line "
-        role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  yrm use taobao &nbsp; &nbsp; &nbsp;  # 使用淘宝源</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 115px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>以上代码进行换源。</span></p>
-    <h3 id='angularcli安装及配置'><span>Angular/cli安装及配置</span></h3>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">yarn global add @angular/cli 即可完成安装</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng version 使用命令进行查看是否成功，成功界面如下</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 174336.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 174336"></p>
-    <p><strong><span>配置angular/cli使用yarn作为包管理器，如果有问题随时可转换回npm或者cnpm</span></strong></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng config cli.packageManager yarn --global #注意使用管理员权限</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <h3 id='安装deploydmongodb）'><span>安装Deployd（MongoDB）</span></h3>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">1. yarn global add deployd-cli进行安装</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; 运行dpd -V查看是否安装成功。</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
-    </div>
-    </div>
-    </pre>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">2. 下载MongoDB（https://www.mongodb.com/try/download/community）进行默认安装。</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 110123.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 110123"></p>
-    <p><a href='https://www.mongodb.com/try/download/community'><span>MongoDB</span></a><span> 下载</span></p>
-    <ol start=''>
-        <li><span>切换到需要存放的目录下（非C），执行命令</span></li>
-    </ol>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">dpd create DataOfHero &nbsp; &nbsp; #新建后台服务程序</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  cd TourOfHero &nbsp; &nbsp; &nbsp; &nbsp; #进入目录</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  dpd -d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  #先自动启动MongoDB, 运行后自动在浏览器打开2403的控制台</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 69px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><mark><span>发现问题</span></mark><span>:出现老师所说问题</span></p>
-    <p><img src="./assets/pic/image-20210622233620342.png" referrerpolicy="no-referrer" alt="image-20210622233620342"></p>
-    <p><span>采用方法解决问题</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.25px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;"> 如果仍然提示启动mongoDB失败, 则请先独自运行MongoDB(mongod --dbpath=data),指定当前目录下的data目录为数据库文件目录 然后再执行 dpd --host 127.0.0.1 -d 命令, 明确指定MongoDB服务器的地址. (原因不明)</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 173212.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 173212"></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 173224.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 173224"></p>
-    <p>&nbsp;</p>
-    <hr>
-    <p><mark><span>至此环境基本配置成功，接下来正式开始创建项目</span></mark></p>
-    <h3 id='前端项目初始化'><span>前端项目初始化</span></h3>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng new YXZL --skip-tests</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 102454.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 102454"></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">Would you like to Angular routing? </span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">- Yes</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">Which stylesheet format would you like to use?</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">- SCSS</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><code>--skip-tests</code><span> 用于跳过生产测试，避免新建项目过久。</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 152228.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 152228"></p>
-    <h4 id='引入样式'><span>引入样式</span></h4>
-    <p><span>因 MDB 升级为5.0后所用标签不兼容以前版本，故以下有关MDB代码不能成功运行了。考虑使用免费的 Angular Material（</span><a
-            href='https://material.angular.io/' target='_blank'
-            class='url'>https://material.angular.io/</a><span>）</span></p>
-    <p><span>去官网查询，发现使用方法较为简单</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng add @angular/material</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 152106.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 152106"></p>
-    <p><strong><span>使用 </span><code>ng serve -0</code><span> 进行本地服务器测试</span></strong><span>，成功后页面显示为：</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 103258.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 103258"></p>
-    <h3 id='新建数据仓库'><span>新建数据仓库</span></h3>
-    <p><span>打开窗口</span><strong><span>localhost:2403</span></strong><span>进行数据库创建，根据题目需求，建立如下数据模型</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation" >
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">-----------------------------------------------</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">#属性名称 &nbsp; &nbsp; &nbsp; 数据类型 &nbsp; &nbsp; &nbsp; &nbsp; 允许为空 &nbsp;  说明</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">---------------------------------------------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">id &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no &nbsp; &nbsp; &nbsp; &nbsp; 系统设定</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">no &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no &nbsp; &nbsp; &nbsp; &nbsp; 编号</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">name &nbsp; &nbsp; &nbsp; &nbsp;  string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no &nbsp; &nbsp; &nbsp; &nbsp; 姓名</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">description &nbsp; string &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; yes &nbsp; &nbsp; &nbsp;  简介</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">isTop &nbsp; &nbsp; &nbsp; &nbsp; boolean &nbsp; &nbsp; &nbsp; &nbsp;  yes &nbsp; &nbsp; &nbsp;  是否顶级英雄 &nbsp;</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">----------------------------------------------</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 230px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 181631.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 181631"></p>
-    <p>&nbsp;</p>
-    <p><span>同时，为保持数据的一致性，我们在 </span><code>app</code><span>目录中新建 </span><code>hero.ts</code><span>文件如下：</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 184809.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 184809"></p>
-    <p><span>至此，英雄的属性全部具备。</span></p>
-    <h3 id='完成ts编码'><span>完成TS编码</span></h3>
-    <p><span>站在巨人的肩膀上好办事儿，我学习的基础是有老师的源代码和各个地方的源代码的，故参考老师的代码我完成了后端逻辑方面的代码。即完成了各个组件的TS部分代码编辑，用简单的文字版基本实现功能。</span></p>
-    <p><img src="./assets/pic/image-20210623055742958.png" referrerpolicy="no-referrer" alt="image-20210623055742958"></p>
-    <h4 id='新建服务'><span>新建服务</span></h4>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 184858.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 184858"></p>
-    <p><span>通过以上，构建出核心的公共服务来管理数据的获取和写入</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 184937.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 184937"></p>
-    <p><span>但实现此功能需要基础</span><code>HttpClientModule</code><span>，故现在</span><code>AppModule</code><span>中声明。</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 185036-1624399318056.png" referrerpolicy="no-referrer"
-            alt="屏幕截图 2021-06-20 185036"></p>
-    <h4 id='新建组件'><span>新建组件</span></h4>
-    <p><span>完成以后开始编写我们的各个页面组件，使用代码进行创建</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng g c components/heroList</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng g c components/heroDetail</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng g c components/heroTop</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng g c components/heroAdd</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 92px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>根据教程，完善各组件TS代码</span></p>
-    <p><img src="./assets/pic/image-20210623060559698.png" referrerpolicy="no-referrer" alt="image-20210623060559698"></p>
-    <p><span>基本实现文本版功能，如下图</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 143204.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 143204"></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 143218.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 143218"></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 150402.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 150402"></p>
-    <p><span>但这样的界面完全不符合人类正常申美，我们用官方提供UI库——Angular
-            Material进行美化，</span><strong><span>需要使用某组件时在AppModule中声明并引用</span></strong></p>
-    <h4 id='添加路由'><span>添加路由</span></h4>
-    <p><strong><span>在app.component中进行导航栏的设置</span></strong><span>，提供了导航路由链接。</span></p>
-    <p><span>将同级目录下</span><code>app-routing.module.ts</code><span>的内容修改为</span></p>
-    <p><img src="./assets/pic/image-20210623074645620.png" referrerpolicy="no-referrer" alt="image-20210623074645620"></p>
-    <h3 id='使用主题'><span>使用主题</span></h3>
-    <p><mark><span>开始调用官方的仓库总是出错，样式与官方完全不同</span></mark></p>
-    <p><span>针对此问题，后来发现是因为在以前测试的时候，添加了对应的material，而正式项目并没有添加。</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 143218-1624400314806.png" referrerpolicy="no-referrer"
-            alt="屏幕截图 2021-06-21 143218"></p>
-    <p><span>所以赶紧补上</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng add @angular/material</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>如此使得我们的界面符合官方UI的样式，</span><strong><span>此处导航栏使用了toolbar。</span></strong></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 150402-1624400321768.png" referrerpolicy="no-referrer"
-            alt="屏幕截图 2021-06-21 150402"></p>
-    <p><strong><span>空的mat-table完成</span></strong></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-21 235648.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-21 235648"></p>
-    <p><span>接下来使用许多组件完成了英雄之旅页面的编写，比如</span></p>
-    <ul>
-        <li>
-            <p><span>按钮 Button 美化按钮或链接</span></p>
-        </li>
-        <li>
-            <p><span>卡片 Card 用于Top英雄前期展示</span></p>
-        </li>
-        <li>
-            <p><span>表单字段 Form field 进行英雄需求编辑页面输入</span></p>
-        </li>
-        <li>
-            <p><span>网格列表 Grid list 将所有顶级英雄每行两个排列</span></p>
-        </li>
-        <li>
-            <p><span>图标 Icon 快速使用小图标</span></p>
-        </li>
-        <li>
-            <p><span>输入框 input 用于用户输入位置</span></p>
-        </li>
-        <li>
-            <p><span>快餐栏 Snackbar 可用于简短的添加英雄成功提醒</span></p>
-        </li>
-        <li>
-            <p><span>表格 Table 显示所有英雄列表</span></p>
-        </li>
-        <li>
-            <p><span>工具栏 Toolbar 导航栏组合创建</span></p>
-            <p><span>最后完成界面的编写。</span></p>
-            <p><span>此处不再赘述页面分析，见前页面展示</span></p>
-        </li>
-    </ul>
-    <h3 id='进行项目部署'><span>进行项目部署</span></h3>
-    <p><span>项目部署这一块我尝试了很多方法，当我完成代码时，最开始尝试在github上部署此页面，发现动态网站部署需要的服务器环境没有。</span></p>
-    <p><span>于是根据使用的架构，希望使用云数据库从github上链接，于是注册了阿里云RDS云数据库，但是研究了一晚上没明白如何实现我们在Servise中的通过http进行数据库返回数据。</span></p>
-    <p><img src="./assets/pic/image-20210623063212040.png" referrerpolicy="no-referrer" alt="image-20210623063212040"></p>
-    <p><span>最后在阿里云使用了ESC实例，直接将项目在vscode中编译，</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng build</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>产生的文件夹dist，将其中的代码全部复制</span></p>
-    <p><span>在阿里云环境下搭建Deployd环境，下载nginx用于部署网页应用。</span></p>
-    <p><img src="./assets/pic/image-20210623063537731.png" referrerpolicy="no-referrer" alt="image-20210623063537731"></p>
-    <p><span>如此可以通过云服务器的公网进入访问，但其中的问题有几个</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation" >
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">远程连接服务器</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">传输文件到服务器</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">服务器nginx环境配置设置</span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">解决网页刷新404</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 161px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 161px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>后续问题部分讲解如何处理。</span></p>
-    <h2 id='遇到的问题怎么解决'><span>遇到的问题？怎么解决？</span></h2>
-    <h3 id='1）yarn等无法被windows识别报错'><span>（1）yarn等无法被windows识别，报错</span></h3>
-    <p><mark><span>发现问题</span></mark><span>：</span></p>
-    <p><span>提示禁止运行脚本，根据百度搜索用一行代码更改某值属性解决问题。</span></p>
-    <p><img src="./assets/pic/image-20210622232424294.png" referrerpolicy="no-referrer" alt="image-20210622232424294"></p>
-    <h3 id='2）创建后台服务程序失败'><span>（2）创建后台服务程序失败</span></h3>
-    <p><img src="./assets/pic/屏幕截图 2021-06-22 233611.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-22 233611"></p>
-    <p><mark><span>发现问题</span></mark><span>：</span></p>
-    <p><span>提示</span><code>mongod</code><span>路径无法使用，但其实已经加入到环境变量</span></p>
-    <p><span>先独自运行MongoDB(mongod </span><em><span>--dbpath=data),指定当前目录下的data目录为数据库文件目录 然后再执行 dpd --host 127.0.0.1 -d
-                命令, 明确指定MongoDB服务器的地址. (原因不明)</span></em></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">mongod --dbpath=data</span></pre>
-        </div>
-        <pre class=" CodeMirror-line "
-            role="presentation"><span role="presentation" style="padding-right: 0.1px;">dpd --host 127.0.0.1 -d</span></pre>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 46px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 173045.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 173045"></p>
-    <p><mark><span>发现问题2</span></mark><span>：</span></p>
-    <p><span>在本地使用没有，阿里云服务器中会报错</span><code>“lookup is not function...”</code><span>之类的错误，</span></p>
-    <ul>
-        <li><span>修改刚生成的 DataOfHero目录下 </span><code>node_modules/filed/main.js</code><span>文件33和155行 lookup 函数为 getType
-                即可</span></li>
-    </ul>
-    <p><strong><span>正常工作~</span></strong></p>
-    <h3 id='3）mdb不适配'><span>（3）MDB不适配</span></h3>
-    <p><span>此处忘记截图了，按照老师教程来，提示无法正常运行，且更改了我许多文件，当时都要崩溃了，错误出好多。</span></p>
-    <p><span>但是后来决定使用Material来代替，一键安装</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">ng add @angular/material</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>还顺手给我解决了刚刚安装坏了的那些东西，perfect</span></p>
-    <h3 id='4）ts编码问题'><span>（4）TS编码问题</span></h3>
-    <p><img src="./assets/pic/屏幕截图 2021-06-20 191123.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-20 191123"></p>
-    <p><img src="./assets/pic/image-20210623065300840.png" referrerpolicy="no-referrer" alt="image-20210623065300840"></p>
-    <p><mark><span>发现问题</span></mark><span>：</span></p>
-    <p><span>在多个TS文件中出现的错误，普遍表示为声明的变量没有初始化。我们使用一些方法进行了初始化，但是还有一些需要使用特殊方法。</span></p>
-    <p><span>比如某处需要使用</span></p>
-    <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-        lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-    </div>
-    <div class="CodeMirror-measure"></div>
-    <div style="position: relative; z-index: 1;"></div>
-    <div class="CodeMirror-code" role="presentation">
-        <div class="CodeMirror-activeline" style="position: relative;">
-            <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-            <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div>
-            <pre class=" CodeMirror-line "
-                role="presentation"><span role="presentation" style="padding-right: 0.1px;">hero!:Hero;</span></pre>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div>
-    <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-    </div>
-    </div>
-    </pre>
-    <p><span>这类型通常为下方有根据英雄进行查找，不能根据空的东西进行搜索。</span></p>
-    <p><span>最后提前判断其是否为空解决问题。</span></p>
-    <h3 id='5）组件的值传递'><span>（5）组件的值传递</span></h3>
-    <p><span>如何制作个性化组件，组件套用组件，在一开始我是完全捉摸不透的，后来我仔细阅读了文档，发现其关键便是在于组件间的数据传输，而经典的无非不是</span><code>@Input()</code><span>和</span><code>@Output()</code>
-    </p>
-    <p><span>利用这两者，我实现了一部分个性定制</span></p>
-    <h3 id='6）路由导航刷新页面就404'><span>（6）路由导航刷新页面就404</span></h3>
-    <p><span>因为其页面上的导航不是正常的链接，所以智能以此通过路由访问，刷新页面将导致404错误</span></p>
-    <p><img src="./assets/pic/image-20210623070300072.png" referrerpolicy="no-referrer" alt="image-20210623070300072"></p>
-    <p><mark><span>解决方法</span></mark><span>：</span></p>
-    <ol start=''>
-        <li>
-            <p><span>失败</span></p>
-            <pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false"
-                lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>
-            </div>
-            <div class="CodeMirror-measure"></div>
-            <div style="position: relative; z-index: 1;"></div>
-            <div class="CodeMirror-code" role="presentation">
-                <div class="CodeMirror-activeline" style="position: relative;">
-                    <div class="CodeMirror-activeline-background CodeMirror-linebackground"></div>
-                    <div class="CodeMirror-gutter-background CodeMirror-activeline-gutter"
-                        style="left: 0px; width: 0px;"></div>
-                    <pre class=" CodeMirror-line "
-                        role="presentation"><span role="presentation" style="padding-right: 0.1px;">尝试使用nginx的配置设置trifiles但是没生效</span></pre>
-                </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            <div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;">
-            </div>
-            <div class="CodeMirror-gutters" style="display: none; height: 23px;"></div>
-            </div>
-            </div>
-            </pre>
-        </li>
-        <li>
-            <p><span>成功</span></p>
-            <p><img src="./assets/pic/image-20210623074734367.png" referrerpolicy="no-referrer" alt="image-20210623074734367">
-            </p>
-            <p><span>声明完成以后，将自动在两个之间 加入</span><code>#</code><span>号，可以正常刷新，如下图</span></p>
-            <p><img src="./assets/pic/image-20210623070433386.png" referrerpolicy="no-referrer" alt="image-20210623070433386">
-            </p>
-        </li>
-    </ol>
-    <h3 id='7）项目部署问题'><span>（7）项目部署问题</span></h3>
-    <h4 id='远程连接服务器'><span>远程连接服务器</span></h4>
-    <p><span>使用windows自带的远程桌面居然不能连接，没有找到原因，在管理页面通过</span><span> </span><code>VNC</code><span>进入阿里云下载了向日葵远程控制</span></p>
-    <p><img src="./assets/pic/image-20210623070722577.png" referrerpolicy="no-referrer" alt="image-20210623070722577"></p>
-    <p><span>注：云服务器下载权限很严格需要先设置允许下载</span></p>
-    <h4 id='文件传输问题'><span>文件传输问题</span></h4>
-    <p><span>因为之前采用VNC登录，不知道怎么传文件，但是没想到向日葵帮我一并搞定了。</span></p>
-    <h3 id='8）图标库无法打开'><span>（8）图标库无法打开</span></h3>
-    <p><span>因为网络问题还是怎么，material中的图标库我不能访问，所以百度搜索了一张简单的图，码一下</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-22 085445-1624403457418.png" referrerpolicy="no-referrer"
-            alt="屏幕截图 2021-06-22 085445"></p>
-    <h3 id='9）组件库不符合心意'><span>（9）组件库不符合心意</span></h3>
-    <p><span>有的组件不太符合我心里所需要的那种，所以只能自己敲代码，但是我更喜欢拿现成的</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-22 024025.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-22 024025"></p>
-    <p><span>这类型卡片不好看，所以百度搜索这个卡片库</span></p>
-    <p><img src="./assets/pic/屏幕截图 2021-06-22 014208.png" referrerpolicy="no-referrer" alt="屏幕截图 2021-06-22 014208"></p>
-    <p><span>有许多其他人写在里面的Html+Css+Js，可以直接复制使用</span></p>
-    <h3 id='还有许多其他问题一些零零星星小问题但是当时都忘记记录现在再来复盘已经回顾不全'><span>还有许多其他问题，一些零零星星小问题，但是当时都忘记记录，现在再来复盘已经回顾不全</span></h3>
-    <h2 id='未解决的问题'><span>未解决的问题</span></h2>
-    <ul>
-        <li><span>关于本项目的目标是要增删改查，目前应该是做到了增加、删除、修改，但是查找没有进行实现。</span></li>
-        <li><span>功能性方面: 无日志处理服务；无错误处理服务；不能处理图片；无分页功能等</span></li>
-        <li><span>安全性方面: 前后台无用户验证和授权</span></li>
-        <li><span>服务器权限不会设置，使用全局开放，完全不适用于市场环境</span></li>
-        <li><span>还有就是这个页面缺少响应式设计！！！！！！！！！！！！</span></li>
-    </ul>
-    <h2 id='总结'><span>总结</span></h2>
-    <p><span>在本次的Web程序设计基础中，感觉收益颇丰，学习到了各种知识、技巧。其实对于我来说更大的收获是知道了什么是框架，为什么他可以称之为框架，这些在从前难以理解的东西，因为没有实际动手去做过。</span></p>
-    <p><span>据我所了解，大部分同学都是用的是MDB构建5个网页，但是我觉得用Angular更能学习到一些新的东西，所以我选的这个。</span></p>
-    <p><span>但是在做的过程中，错误频频。各种因为不熟悉框架的错误频频打击我的自信心，我能做出来吗？</span></p>
-    <p><span>还好最后经过我不懈的努力与网络资源的发达，我成功的解决了遇到的基本每一个问题，看着基本实现的页面，我心中无比的成就感。</span></p>
-    <p><span>我认为虽然这个项目我全程基本是根据老师的教程，官网的教程依葫芦画瓢，但是其中教程本身有些错误或过时的东西需要我自己去解决，这个过程我想我已经对于其有充分的了解了。</span></p>
-    <p><span>最后感谢老师的指导，让我在这门课上学到的东西比其他课多得多，不仅仅是理论，更是实践。</span></p>
-    <p><span>我相信我现在已经基本具备了web应用开发的能力，后续还将继续学习，加深技术栈。</span></p>
-    </div>
-    </div>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2021-06-23</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p></p><div class="toc"><h3>文章目录</h3><ul><li><a href="#Web_1">Web应用基础</a></li><ul><li><a href="#__5">做的什么 ？</a></li><ul><li><a href="#_9">期间接触到许多新的技术和知识如下：</a></li><li><a href="#_23">最终项目实现：</a></li><li><a href="#_35">页面展示：</a></li><ul><li><a href="#_37">所有英雄列表页面</a></li><li><a href="#_63">顶级英雄列表页面</a></li><li><a href="#_111">添加英雄</a></li><li><a href="#_121">我的报告页面</a></li></ul></ul><li><a href="#_127">开发过程</a></li><ul><li><a href="#TypeScriptnodegit_129">TypeScript+node+git前期准备</a></li><li><a href="#vsCode_133">vsCode配置</a></li><li><a href="#yarn_137">yarn安装</a></li><li><a href="#Angularcli_158">Angular/cli安装及配置</a></li><li><a href="#DeploydMongoDB_176">安装Deployd（MongoDB）</a></li><li><a href="#_219">前端项目初始化</a></li><ul><li><a href="#_238">引入样式</a></li></ul><li><a href="#_254">新建数据仓库</a></li><li><a href="#TS_281">完成TS编码</a></li><ul><li><a href="#_287">新建服务</a></li><li><a href="#_299">新建组件</a></li><li><a href="#_324">添加路由</a></li></ul><li><a href="#_332">使用主题</a></li><li><a href="#_378">进行项目部署</a></li></ul><li><a href="#_412">遇到的问题？怎么解决？</a></li><ul><li><a href="#1yarnwindows_414">（1）yarn等无法被windows识别，报错</a></li><li><a href="#2_422">（2）创建后台服务程序失败</a></li><li><a href="#3MDB_447">（3）MDB不适配</a></li><li><a href="#4TS_459">（4）TS编码问题</a></li><li><a href="#5_479">（5）组件的值传递</a></li><li><a href="#6404_485">（6）路由导航刷新页面就404</a></li><li><a href="#7_507">（7）项目部署问题</a></li><ul><li><a href="#_509">远程连接服务器</a></li><li><a href="#_517">文件传输问题</a></li></ul><li><a href="#8_521">（8）图标库无法打开</a></li><li><a href="#9_527">（9）组件库不符合心意</a></li><li><a href="#_539">还有许多其他问题，一些零零星星小问题，但是当时都忘记记录，现在再来复盘已经回顾不全</a></li></ul><li><a href="#_541">未解决的问题</a></li><li><a href="#_550">总结</a></li></ul></ul></div><p></p>
+<h1><a id="Web_1"></a>Web应用基础</h1>
+<p><a href="https://github.com/Tgmmmmmmmm/YXZL.git">Github源码地址</a></p>
+<h2><a id="__5"></a>做的什么 ？</h2>
+<p>在本次的开发中Web应用基础开发中，秉承着<code>学习</code>+<code>实践</code>的理念，我结合老师的<strong>英雄之旅1.0教程</strong>、<strong>英雄之旅2.0教程</strong>、<strong>Angular官网教程：英雄之旅</strong>三大教程等资料，进行前端框架<code>Angular</code>模拟一个生产环境进行我的<strong>TOH英雄之旅</strong>开发</p>
+<h3><a id="_9"></a>期间接触到许多新的技术和知识如下：</h3>
+<pre><code>1. Typescript基础语法
+2. JS运行环境node安装
+3. vsCode运行环境插件配置
+4. git版本控制使用
+5. github远端仓库使用
+6. 包管理器选择及配置
+7. Angular开发工具angular/cli安装配置及使用
+8. 利用Node和MongoDB支持的合成框架Deployd后台服务器
+9. 利用angular/cli部署
+</code></pre>
+<h3><a id="_23"></a>最终项目实现：</h3>
+<ul>
+<li>导航栏固定使用路由更换显示组件</li>
+<li>所有英雄列表，单击某英雄将展开操作页面</li>
+<li>顶级英雄卡片，查看详情进入英雄详情</li>
+<li>英雄详情页面可以编辑英雄信息并保存同步至服务器</li>
+<li>添加英雄到数据库</li>
+<li>使用共享服务管理英雄</li>
+<li>使用路由在不同视图及组件导航</li>
+<li>组件数据传递、组件方法绑定</li>
+<li>报告展示</li>
+</ul>
+<h3><a id="_35"></a>页面展示：</h3>
+<h4><a id="_37"></a>所有英雄列表页面</h4>
+<p><img src="./assets/pic/image-20210622223902203.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><img src="./assets/pic/image-20210622223902203.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>该页面组成由<code>导航栏</code>和<code>列表</code>组成，导航栏为app应用构建，下面的所有内容都是路由展示的视图。</p>
+<p>导航栏可以分别切换四个视图，之后将对每个页面进行简单介绍。</p>
+<p><strong>英雄列表</strong> 有编号，姓名，是否为顶级英雄三个属性。</p>
+<p>每一列对应一位英雄，单击可展开其中的操作页面</p>
+<p><img src="./assets/pic/image-20210622224357341.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><strong>操作页面</strong> 展示了该英雄的名字，id，和描述信息</p>
+<p><strong>可以进行·<code>删除</code>与<code>进入英雄详情页面编辑</code></strong></p>
+<p>此功能与顶级英雄详情页面雷同，后续进行解释。</p>
+<p><img src="./assets/pic/image-20210622224039337.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>注：<img src="./assets/pic/image-20210623074503518.png" referrerpolicy="no-referrer" alt="显示不了">进行占位，后续所有路由导航的组件皆在这里展示。</p>
+<h4><a id="_63"></a>顶级英雄列表页面</h4>
+<p><img src="./assets/pic/image-20210622224927511.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>该页面导航栏不再赘述，其下排布有<strong>所有顶级英雄的卡片介绍</strong></p>
+<p>点击<code>查看详情</code>可以单独查看某位英雄的详情页面，</p>
+<p><strong>详情页面</strong> 可以编辑英雄的所有信息</p>
+<p><img src="./assets/pic/image-20210622225313051.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>点击<code>编辑</code>符号进入编辑模式，<code>返回</code>符号返回进入的页面，即英雄列表或顶级英雄卡片。</p>
+<p><strong>编辑页面</strong> 对每个展示的信息利用<strong>输入框绑定数据</strong>进行修改一下数据。</p>
+<p><strong>注意特殊符号：</strong></p>
+<p><code>保存</code>：</p>
+<p><img src="./assets/pic/image-20210622225544916.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>更改信息后<strong>必须点击保存</strong>才能更改数据库信息。</p>
+<p><em><strong>保存后将返回页面并提示</strong></em></p>
+<p><img src="./assets/pic/image-20210622230027208.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><code>是否顶级符号</code></p>
+<p><code>顶级</code>:</p>
+<p><img src="./assets/pic/image-20210622225735815.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><code>非顶级</code>:</p>
+<p><img src="./assets/pic/image-20210622225823270.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><strong>单击顶级符号</strong>即可更改状态。</p>
+<p><mark>详情页面多处使用了*ngif以显示和隐藏组件</mark></p>
+<p><img src="./assets/pic/image-20210623074542182.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>各页面详细代码后续附上。</p>
+<h4><a id="_111"></a>添加英雄</h4>
+<p><img src="./assets/pic/image-20210622230420863.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>添加英雄页面与 <strong>详情页面下的编辑模式相似</strong></p>
+<p>不过没有内置属性，将新建数据到数据库</p>
+<h4><a id="_121"></a>我的报告页面</h4>
+<p>由于本次构建的是angular动态网页，免费部署到github只能为静态网页，所以一开始本页面将放置演示视频。</p>
+<p>通过本课程也学习到了markdown语法书写文档，所以本报告采用typora书写转换为html格式上传。</p>
+<h2><a id="_127"></a>开发过程</h2>
+<h3><a id="TypeScriptnodegit_129"></a>TypeScript+node+git前期准备</h3>
+<p>此三项知识技能及环境准备在以前就已经完成，所以本次开发直接使用，不再赘述过程。</p>
+<h3><a id="vsCode_133"></a>vsCode配置</h3>
+<p>此次编辑使用VS Code进行，其中内置了git使用方式，不需要使用git bash进行。提前将git与远端仓库github进行配置好，使用ssh连接方式。</p>
+<h3><a id="yarn_137"></a>yarn安装</h3>
+<p>使用yarn包进行管理，同时更换其包仓库为淘宝</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 093144.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><mark>发现问题</mark>：</p>
+<p>提示禁止运行脚本，根据百度搜索用一行代码更改某值属性解决问题。</p>
+<p><img src="./assets/pic/image-20210622232424294.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<pre><code> yarn global add yrm   # 注意使用管理员权限进行全局安装. 注意: 如果安装成功后yrm不能运行, 则是路径问题, 请使用 yarn global bin 查看位置并添加到系统路径中(建议重启系统生效)
+      yrm ls                # 列出可用的源
+      yrm test taobao       # 测速
+      yrm use taobao        # 使用淘宝源
+</code></pre>
+<p>以上代码进行换源。</p>
+<h3><a id="Angularcli_158"></a>Angular/cli安装及配置</h3>
+<pre><code>yarn global add @angular/cli 即可完成安装
+</code></pre>
+<pre><code>ng version 使用命令进行查看是否成功，成功界面如下
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 174336.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><strong>配置angular/cli使用yarn作为包管理器，如果有问题随时可转换回npm或者cnpm</strong></p>
+<pre><code>ng config cli.packageManager yarn --global #注意使用管理员权限
+</code></pre>
+<h3><a id="DeploydMongoDB_176"></a>安装Deployd（MongoDB）</h3>
+<pre><code>1. yarn global add deployd-cli进行安装
+   运行dpd -V查看是否安装成功。
+</code></pre>
+<pre><code>2. 下载MongoDB（https://www.mongodb.com/try/download/community）进行默认安装。
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 110123.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><a href="https://www.mongodb.com/try/download/community">MongoDB</a> 下载</p>
+<ol>
+<li>切换到需要存放的目录下（非C），执行命令</li>
+</ol>
+<pre><code>dpd create DataOfHero     #新建后台服务程序
+    cd TourOfHero         #进入目录
+    dpd -d                #先自动启动MongoDB, 运行后自动在浏览器打开2403的控制台
+</code></pre>
+<p><mark>发现问题</mark>:出现老师所说问题</p>
+<p><img src="./assets/pic/image-20210622233620342.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>采用方法解决问题</p>
+<pre><code> 如果仍然提示启动mongoDB失败, 则请先独自运行MongoDB(mongod --dbpath=data),指定当前目录下的data目录为数据库文件目录 然后再执行 dpd --host 127.0.0.1 -d 命令, 明确指定MongoDB服务器的地址. (原因不明)
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 173212.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 173224.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<hr>
+<p><mark>至此环境基本配置成功，接下来正式开始创建项目</mark></p>
+<h3><a id="_219"></a>前端项目初始化</h3>
+<pre><code>ng new YXZL --skip-tests
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 102454.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<pre><code>Would you like to Angular routing? 
+- Yes
+Which stylesheet format would you like to use?
+- SCSS
+</code></pre>
+<p><code>--skip-tests</code> 用于跳过生产测试，避免新建项目过久。</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 152228.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h4><a id="_238"></a>引入样式</h4>
+<p>因 MDB 升级为5.0后所用标签不兼容以前版本，故以下有关MDB代码不能成功运行了。考虑使用免费的 Angular Material（https://material.angular.io/）</p>
+<p>去官网查询，发现使用方法较为简单</p>
+<pre><code>ng add @angular/material
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 152106.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><strong>使用 <code>ng serve -0</code> 进行本地服务器测试</strong>，成功后页面显示为：</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 103258.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h3><a id="_254"></a>新建数据仓库</h3>
+<p>打开窗口<strong>localhost:2403</strong>进行数据库创建，根据题目需求，建立如下数据模型</p>
+<pre><code>
+-----------------------------------------------
+#属性名称       数据类型         允许为空    说明
+----------------------------------------------            
+id            string           no         系统设定
+no            string           no         编号
+name          string           no         姓名
+description   string           yes        简介
+isTop         boolean          yes        是否顶级英雄  
+----------------------------------------------
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 181631.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>同时，为保持数据的一致性，我们在 <code>app</code>目录中新建 <code>hero.ts</code>文件如下：</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 184809.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>至此，英雄的属性全部具备。</p>
+<h3><a id="TS_281"></a>完成TS编码</h3>
+<p>站在巨人的肩膀上好办事儿，我学习的基础是有老师的源代码和各个地方的源代码的，故参考老师的代码我完成了后端逻辑方面的代码。即完成了各个组件的TS部分代码编辑，用简单的文字版基本实现功能。</p>
+<p><img src="./assets/pic/image-20210623055742958.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h4><a id="_287"></a>新建服务</h4>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 184858.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>通过以上，构建出核心的公共服务来管理数据的获取和写入</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 184937.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>但实现此功能需要基础<code>HttpClientModule</code>，故现在<code>AppModule</code>中声明。</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 185036-1624399318056.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h4><a id="_299"></a>新建组件</h4>
+<p>完成以后开始编写我们的各个页面组件，使用代码进行创建</p>
+<pre><code>ng g c components/heroList
+ng g c components/heroDetail
+ng g c components/heroTop
+ng g c components/heroAdd
+</code></pre>
+<p>根据教程，完善各组件TS代码</p>
+<p><img src="./assets/pic/image-20210623060559698.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>基本实现文本版功能，如下图</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 143204.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 143218.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 150402.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>但这样的界面完全不符合人类正常申美，我们用官方提供UI库——Angular Material进行美化，<strong>需要使用某组件时在AppModule中声明并引用</strong></p>
+<h4><a id="_324"></a>添加路由</h4>
+<p><strong>在app.component中进行导航栏的设置</strong>，提供了导航路由链接。</p>
+<p>将同级目录下<code>app-routing.module.ts</code>的内容修改为</p>
+<p><img src="./assets/pic/image-20210623074645620.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h3><a id="_332"></a>使用主题</h3>
+<p><mark>开始调用官方的仓库总是出错，样式与官方完全不同</mark></p>
+<p>针对此问题，后来发现是因为在以前测试的时候，添加了对应的material，而正式项目并没有添加。</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 143218-1624400314806.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>所以赶紧补上</p>
+<pre><code>ng add @angular/material
+</code></pre>
+<p>如此使得我们的界面符合官方UI的样式，<strong>此处导航栏使用了toolbar。</strong></p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 150402-1624400321768.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><strong>空的mat-table完成</strong></p>
+<p><img src="./assets/pic/屏幕截图 2021-06-21 235648.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>接下来使用许多组件完成了英雄之旅页面的编写，比如</p>
+<ul>
+<li>
+<p>按钮 Button 美化按钮或链接</p>
+</li>
+<li>
+<p>卡片 Card 用于Top英雄前期展示</p>
+</li>
+<li>
+<p>表单字段 Form field 进行英雄需求编辑页面输入</p>
+</li>
+<li>
+<p>网格列表 Grid list 将所有顶级英雄每行两个排列</p>
+</li>
+<li>
+<p>图标 Icon 快速使用小图标</p>
+</li>
+<li>
+<p>输入框  input 用于用户输入位置</p>
+</li>
+<li>
+<p>快餐栏 Snackbar 可用于简短的添加英雄成功提醒</p>
+</li>
+<li>
+<p>表格 Table 显示所有英雄列表</p>
+</li>
+<li>
+<p>工具栏 Toolbar 导航栏组合创建</p>
+<p>最后完成界面的编写。</p>
+<p>此处不再赘述页面分析，见前页面展示</p>
+</li>
+</ul>
+<h3><a id="_378"></a>进行项目部署</h3>
+<p>项目部署这一块我尝试了很多方法，当我完成代码时，最开始尝试在github上部署此页面，发现动态网站部署需要的服务器环境没有。</p>
+<p>于是根据使用的架构，希望使用云数据库从github上链接，于是注册了阿里云RDS云数据库，但是研究了一晚上没明白如何实现我们在Servise中的通过http进行数据库返回数据。</p>
+<p><img src="./assets/pic/image-20210623063212040.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>最后在阿里云使用了ESC实例，直接将项目在vscode中编译，</p>
+<pre><code>ng build
+</code></pre>
+<p>产生的文件夹dist，将其中的代码全部复制</p>
+<p>在阿里云环境下搭建Deployd环境，下载nginx用于部署网页应用。</p>
+<p><img src="./assets/pic/image-20210623063537731.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>如此可以通过云服务器的公网进入访问，但其中的问题有几个</p>
+<pre><code>远程连接服务器
+
+传输文件到服务器
+
+服务器nginx环境配置设置
+
+解决网页刷新404
+</code></pre>
+<p>后续问题部分讲解如何处理。</p>
+<h2><a id="_412"></a>遇到的问题？怎么解决？</h2>
+<h3><a id="1yarnwindows_414"></a>（1）yarn等无法被windows识别，报错</h3>
+<p><mark>发现问题</mark>：</p>
+<p>提示禁止运行脚本，根据百度搜索用一行代码更改某值属性解决问题。</p>
+<p><img src="./assets/pic/image-20210622232424294.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h3><a id="2_422"></a>（2）创建后台服务程序失败</h3>
+<p><img src="./assets/pic/屏幕截图 2021-06-22 233611.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><mark>发现问题</mark>：</p>
+<p>提示<code>mongod</code>路径无法使用，但其实已经加入到环境变量</p>
+<p>先独自运行MongoDB(mongod <em>–dbpath=data),指定当前目录下的data目录为数据库文件目录 然后再执行 dpd --host 127.0.0.1 -d 命令, 明确指定MongoDB服务器的地址. (原因不明)</em></p>
+<pre><code>mongod --dbpath=data
+dpd --host 127.0.0.1 -d
+</code></pre>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 173045.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><mark>发现问题2</mark>：</p>
+<p>在本地使用没有，阿里云服务器中会报错<code>“lookup is not function...”</code>之类的错误，</p>
+<ul>
+<li>修改刚生成的 DataOfHero目录下 <code>node_modules/filed/main.js</code>文件33和155行 lookup 函数为 getType 即可</li>
+</ul>
+<p><strong>正常工作~</strong></p>
+<h3><a id="3MDB_447"></a>（3）MDB不适配</h3>
+<p>此处忘记截图了，按照老师教程来，提示无法正常运行，且更改了我许多文件，当时都要崩溃了，错误出好多。</p>
+<p>但是后来决定使用Material来代替，一键安装</p>
+<pre><code>ng add @angular/material
+</code></pre>
+<p>还顺手给我解决了刚刚安装坏了的那些东西，perfect</p>
+<h3><a id="4TS_459"></a>（4）TS编码问题</h3>
+<p><img src="./assets/pic/屏幕截图 2021-06-20 191123.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><img src="./assets/pic/image-20210623065300840.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><mark>发现问题</mark>：</p>
+<p>在多个TS文件中出现的错误，普遍表示为声明的变量没有初始化。我们使用一些方法进行了初始化，但是还有一些需要使用特殊方法。</p>
+<p>比如某处需要使用</p>
+<pre><code>hero!:Hero;
+</code></pre>
+<p>这类型通常为下方有根据英雄进行查找，不能根据空的东西进行搜索。</p>
+<p>最后提前判断其是否为空解决问题。</p>
+<h3><a id="5_479"></a>（5）组件的值传递</h3>
+<p>如何制作个性化组件，组件套用组件，在一开始我是完全捉摸不透的，后来我仔细阅读了文档，发现其关键便是在于组件间的数据传输，而经典的无非不是<code>@Input()</code>和<code>@Output()</code></p>
+<p>利用这两者，我实现了一部分个性定制</p>
+<h3><a id="6404_485"></a>（6）路由导航刷新页面就404</h3>
+<p>因为其页面上的导航不是正常的链接，所以智能以此通过路由访问，刷新页面将导致404错误</p>
+<p><img src="./assets/pic/image-20210623070300072.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p><mark>解决方法</mark>：</p>
+<ol>
+<li>
+<p>失败</p>
+<pre><code>尝试使用nginx的配置设置trifiles但是没生效
+</code></pre>
+</li>
+<li>
+<p>成功</p>
+<p><img src="./assets/pic/image-20210623074734367.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>声明完成以后，将自动在两个之间 加入<code>#</code>号，可以正常刷新，如下图</p>
+<p><img src="./assets/pic/image-20210623070433386.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+</li>
+</ol>
+<h3><a id="7_507"></a>（7）项目部署问题</h3>
+<h4><a id="_509"></a>远程连接服务器</h4>
+<p>使用windows自带的远程桌面居然不能连接，没有找到原因，在管理页面通过	<code>VNC</code>进入阿里云下载了向日葵远程控制</p>
+<p><img src="./assets/pic/image-20210623070722577.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>注：云服务器下载权限很严格需要先设置允许下载</p>
+<h4><a id="_517"></a>文件传输问题</h4>
+<p>因为之前采用VNC登录，不知道怎么传文件，但是没想到向日葵帮我一并搞定了。</p>
+<h3><a id="8_521"></a>（8）图标库无法打开</h3>
+<p>因为网络问题还是怎么，material中的图标库我不能访问，所以百度搜索了一张简单的图，码一下</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-22 085445-1624403457418.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<h3><a id="9_527"></a>（9）组件库不符合心意</h3>
+<p>有的组件不太符合我心里所需要的那种，所以只能自己敲代码，但是我更喜欢拿现成的</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-22 024025.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>这类型卡片不好看，所以百度搜索这个卡片库</p>
+<p><img src="./assets/pic/屏幕截图 2021-06-22 014208.png" referrerpolicy="no-referrer" alt="显示不了"></p>
+<p>有许多其他人写在里面的Html+Css+Js，可以直接复制使用</p>
+<h3><a id="_539"></a>还有许多其他问题，一些零零星星小问题，但是当时都忘记记录，现在再来复盘已经回顾不全</h3>
+<h2><a id="_541"></a>未解决的问题</h2>
+<ul>
+<li>
+<p>关于本项目的目标是要增删改查，目前应该是做到了增加、删除、修改，但是查找没有进行实现。</p>
+</li>
+<li>
+<p>功能性方面: 无日志处理服务；无错误处理服务；不能处理图片；无分页功能等</p>
+</li>
+<li>
+<p>安全性方面: 前后台无用户验证和授权</p>
+</li>
+<li>
+<p>服务器权限不会设置，使用全局开放，完全不适用于市场环境</p>
+</li>
+<li>
+<p>还有就是这个页面缺少响应式设计！！！！！！！！！！！！</p>
+</li>
+</ul>
+<h2><a id="_550"></a>总结</h2>
+<p>在本次的Web程序设计基础中，感觉收益颇丰，学习到了各种知识、技巧。其实对于我来说更大的收获是知道了什么是框架，为什么他可以称之为框架，这些在从前难以理解的东西，因为没有实际动手去做过。</p>
+<p>据我所了解，大部分同学都是用的是MDB构建5个网页，但是我觉得用Angular更能学习到一些新的东西，所以我选的这个。</p>
+<p>但是在做的过程中，错误频频。各种因为不熟悉框架的错误频频打击我的自信心，我能做出来吗？</p>
+<p>还好最后经过我不懈的努力与网络资源的发达，我成功的解决了遇到的基本每一个问题，看着基本实现的页面，我心中无比的成就感。</p>
+<p>我认为虽然这个项目我全程基本是根据老师的教程，官网的教程依葫芦画瓢，但是其中教程本身有些错误或过时的东西需要我自己去解决，这个过程我想我已经对于其有充分的了解了。</p>
+<p>最后感谢老师的指导，让我在这门课上学到的东西比其他课多得多，不仅仅是理论，更是实践。</p>
+<p>我相信我现在已经基本具备了web应用开发的能力，后续还将继续学习，加深技术栈。</p>
+</div>
+
 </body>
+
+</html>
+
